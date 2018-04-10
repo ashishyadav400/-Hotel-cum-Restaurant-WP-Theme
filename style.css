@@ -18,11 +18,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }*/
 html {
 	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
 }
 *, *:before, *:after {
 	box-sizing: inherit;
 }
-
+h1, h2, h3, h4, h5 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+}
 h1 {
 	font-size: 48px;
 }
@@ -144,7 +148,12 @@ nav.socials li a[href*="instagram.com"]::before {
 }
 /*MAIN MENU*/
 nav.site-nav {
-
+	display: none;
+}
+@media only screen and (min-width: 768px) {
+	nav.site-nav {
+	display: block;
+}
 }
 nav.site-nav ul {
 	list-style: none;
@@ -153,10 +162,13 @@ nav.site-nav ul {
 	width: 100%;
 	display: table;
 }
-nav.site-nav ul li {
+@media only screen and (min-width: 768px) {
+	nav.site-nav ul li {
 	display: table-cell;
 	width: 1%;
 }
+}
+
 nav.site-nav ul li a {
 	text-align: center;
 	padding: 20px 0;
@@ -169,4 +181,31 @@ nav.site-nav ul li a {
 }
 nav.site-nav ul li.current_page_item a {
 	border-bottom: 8px solid #a61206;
+}
+/*Responsive Mobile Menu*/
+@media only screen and (max-width: 767px) {
+	.mobile-menu a {
+		height: 40px;
+		line-height: 40px;
+		text-decoration: none;
+		font-size: 20px;
+		background-color: #a61206;
+		width: 100%;
+		display: block;
+		color: white;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.mobile-menu a {
+		display: none;
+	}
+}
+/*HERO IMAGE*/
+.hero{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 450px;
 }
